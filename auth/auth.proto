@@ -1,0 +1,12 @@
+syntax = "proto3";
+package auth;
+
+import "signup.proto";
+import "login.proto";
+import "refresh_token.proto";
+
+service Auth {
+  rpc Login(LoginReq) returns (LoginRes);
+  rpc Signup(SignupReq) returns (SignupRes);
+  rpc RefreshToken(RefreshTokenReq) returns (RefreshTokenRes);
+}

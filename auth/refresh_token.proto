@@ -1,0 +1,10 @@
+syntax = "proto3";
+package auth;
+
+message RefreshTokenReq {
+    string refresh_token = 1;
+}
+
+message RefreshTokenRes {
+    string jwt = 1;
+}

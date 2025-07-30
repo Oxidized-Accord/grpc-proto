@@ -1,0 +1,12 @@
+syntax = "proto3";
+package auth;
+
+message SignupReq {
+  string username = 1;
+  string password = 2;
+}
+
+message SignupRes {
+  string refresh_token = 1;
+  string jwt = 2;
+}
