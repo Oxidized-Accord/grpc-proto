@@ -10,5 +10,5 @@ service Auth {
   rpc Login(LoginReq) returns (LoginRes);
   rpc Signup(SignupReq) returns (SignupRes);
   rpc RefreshToken(RefreshTokenReq) returns (RefreshTokenRes);
-  rpc GetPublicPem() returns (GetPublicPemRes);
+  rpc GetPublicPem(GetPublicPemReq) returns (GetPublicPemRes);
 }
