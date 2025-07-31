@@ -4,9 +4,11 @@ package auth;
 import "signup.proto";
 import "login.proto";
 import "refresh_token.proto";
+import "get_public_pem.proto";
 
 service Auth {
   rpc Login(LoginReq) returns (LoginRes);
   rpc Signup(SignupReq) returns (SignupRes);
   rpc RefreshToken(RefreshTokenReq) returns (RefreshTokenRes);
+  rpc GetPublicPem() returns (GetPublicPemRes);
 }

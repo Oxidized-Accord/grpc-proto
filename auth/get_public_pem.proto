@@ -1,0 +1,8 @@
+syntax = "proto3";
+package auth;
+import "google/protobuf/timestamp.proto";
+
+message GetPublicPem {
+    bytes public_pem = 1;
+    google.protobuf.Timestamp naive_expiration_date = 2;
+}
