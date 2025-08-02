@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+package messaging;
+
+import "google/protobuf/timestamp.proto";
+
+message Message = {
+    string id = 1;
+    string sender = 2;
+    string recipient = 3;
+    string content = 4;
+    google.protobuf.Timestamp timestamp = 5;
+}
+
+
+message SendMessageRequest {
+  Message message = 1;
+}
+
+
+message SendMessageResponse {
+  string status = 1;
+}
+
+service MessagingService {
+  rpc SendMessage(SendMessageRequest) returns (SendMessageResponse);
+}
